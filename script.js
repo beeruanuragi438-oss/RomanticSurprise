@@ -2,7 +2,7 @@ function checkName(){
 
 let name=document.getElementById("name").value.trim().toLowerCase();
 
-if(name!="baby"){
+if(name!="nandni"){
 
 document.getElementById("error").innerHTML=
 "❤️ Ye surprise sirf meri Baby ke liye hai ❤️";
