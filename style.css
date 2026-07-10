@@ -241,3 +241,22 @@ width:90%;
 }
 
 }
+#musicBtn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255,77,109,0.6);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+#musicBtn:hover{
+    transform: scale(1.08);
+}

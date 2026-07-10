@@ -160,3 +160,14 @@ document.getElementById("proposalPage").style.display="flex";
 document.getElementById("proposalPage").classList.add("fadeIn");
 
 }
+const bgMusic = document.getElementById("bgMusic");
+
+function toggleMusic() {
+    if (bgMusic.paused) {
+        bgMusic.play();
+        document.getElementById("musicBtn").innerHTML = "⏸️ Pause";
+    } else {
+        bgMusic.pause();
+        document.getElementById("musicBtn").innerHTML = "🎵 Music";
+    }
+}
