@@ -3,66 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Baby ❤️</title>
+<title>Forever Baby ❤️ Betu</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div id="page1" class="page">
+<div id="hearts"></div>
 
-<h1>❤️ Romantic Surprise ❤️</h1>
+<section class="hero">
 
-<p>Baby, apna naam enter karo 💖</p>
+<h1>❤️ Forever Baby ❤️</h1>
 
-<input type="text" id="name" placeholder="Enter Your Name">
+<p>
+Ek chhota sa surprise...
+Sirf meri Baby ke liye 💖
+</p>
 
-<br><br>
+<a href="#nameSection" class="btn">
+Start Surprise ❤️
+</a>
 
-<button onclick="startLove()">Open My Heart ❤️</button>
+</section>
+
+<section id="nameSection" class="page">
+
+<h2>💖 Welcome 💖</h2>
+
+<p>
+Baby...
+Apna naam enter karo
+</p>
+
+<input
+type="text"
+id="name"
+placeholder="Enter Your Name">
+
+<button onclick="checkName()">
+
+Open My Heart ❤️
+
+</button>
 
 <p id="error"></p>
 
-</div>
+</section>
 
-<div id="page2" class="page" style="display:none;">
+<section id="welcome" class="page hidden">
 
-<h1>Welcome Baby ❤️</h1>
-
-<h2>From Your Betu 💖</h2>
-
-<div id="heartContainer"></div>
+<h2>Welcome Baby ❤️</h2>
 
 <p id="typing"></p>
 
-<button onclick="nextPage()">Next ➜</button>
+<button onclick="showLetter()">
+
+Next 💌
+
+</button>
+
+</section>
+
+<section id="letterPage" class="page hidden">
+
+<h2>💌 Love Letter 💌</h2>
+
+<div id="letterText">
 
 </div>
 
-<div id="page3" class="page" style="display:none;">
+<button onclick="showGallery()">
 
-<h1>💌 Love Letter 💌</h1>
+Next 📸
 
-<div id="letter"></div>
+</button>
 
-<button onclick="nextFinal()">Final Surprise ❤️</button>
+</section>
+
+<section id="galleryPage" class="page hidden">
+
+<h2>📸 Our Beautiful Moments</h2>
+
+<div class="gallery">
+
+<img src="images/photo1.jpg">
+
+<img src="images/photo2.jpg">
+
+<img src="images/photo3.jpg">
 
 </div>
 
-<div id="page4" class="page" style="display:none;">
+<button onclick="showTimer()">
 
-<h1>❤️ Baby ❤️</h1>
+Next ❤️
 
-<h2>You Are My Everything 💖</h2>
+</button>
+
+</section><section id="timerPage" class="page hidden">
+
+<h2>⏳ Forever Together</h2>
 
 <p>
-Main hamesha tumse pyaar karta rahunga.
+Har din tumhare saath meri life aur bhi beautiful hoti ja rahi hai ❤️
 </p>
 
-<h3>Forever Yours ❤️<br>Betu</h3>
+<div id="loveTimer">
+00 Days 00 Hours 00 Minutes
+</div>
+
+<button onclick="showProposal()">
+Final Surprise 💍
+</button>
+
+</section>
+
+<section id="proposalPage" class="page hidden">
+
+<h1>💍 Baby ❤️</h1>
+
+<h2>
+Will You Stay With Me Forever?
+</h2>
+
+<p>
+
+Tum meri zindagi ka sabse khoobsurat hissa ho.
+
+Main hamesha tumhara saath nibhaunga.
+
+❤️ Forever Yours ❤️
+
+<br><br>
+
+<b>Betu</b>
+
+</p>
+
+<div class="finalHeart">
+
+❤️ ❤️ ❤️
 
 </div>
+
+</section>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
