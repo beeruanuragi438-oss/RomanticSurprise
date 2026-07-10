@@ -1,145 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>❤️ A Special Surprise ❤️</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-}
-
-.container{
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-width:90%;
-max-width:350px;
-box-shadow:0 0 30px rgba(0,0,0,.3);
-animation:pop .7s;
-}
-
-@keyframes pop{
-from{transform:scale(.6);opacity:0;}
-to{transform:scale(1);opacity:1;}
-}
-
-h1{
-color:#ff1744;
-margin-bottom:15px;
-}
-
-p{
-margin-bottom:20px;
-font-size:16px;
-}
-
-input{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:1px solid #ccc;
-margin-bottom:20px;
-font-size:16px;
-}
-
-button{
-background:#ff1744;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:30px;
-font-size:17px;
-cursor:pointer;
-}
-
-button:hover{
-background:#e60039;
-}
-
-#surprise{
-display:none;
-}
-
-.big{
-font-size:35px;
-color:#ff1744;
-margin:20px 0;
-animation:beat 1s infinite;
-}
-
-@keyframes beat{
-50%{
-transform:scale(1.15);
-}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❤️ Romantic Surprise ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container" id="login">
+<div class="card">
 
-<h1>❤️ Secret Surprise ❤️</h1>
+  <h1>❤️ Secret Surprise ❤️</h1>
 
-<p>Enter your beautiful name</p>
+  <p>Enter your beautiful name</p>
 
-<input type="text" id="name" placeholder="Your Name">
+  <input id="name" type="text" placeholder="Your Name">
 
-<button onclick="openGift()">Open My Surprise ❤️</button>
-
-</div>
-
-<div class="container" id="surprise">
-
-<h1 id="welcome"></h1>
-
-<div class="big">❤️ I LOVE YOU ❤️</div>
-
-<p>
-You are the most beautiful part of my life. 🌹<br><br>
-
-Every heartbeat reminds me of you.<br>
-
-Thank you for coming into my life. 💖
-</p>
+  <button onclick="openGift()">
+    Open My Surprise ❤️
+  </button>
 
 </div>
 
-<script>
+<div id="surprise" style="display:none;">
 
-function openGift(){
+  <h1 id="welcome"></h1>
 
-let n=document.getElementById("name").value;
+  <h2>❤️ I LOVE YOU ❤️</h2>
 
-if(n==""){
-alert("Please enter your name ❤️");
-return;
-}
+  <p>
+    You are the most beautiful part of my life. 🌹
+  </p>
 
-document.getElementById("login").style.display="none";
+</div>
 
-document.getElementById("surprise").style.display="block";
-
-document.getElementById("welcome").innerHTML="Hi "+n+" ❤️";
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
