@@ -6,22 +6,59 @@
 <title>For Baby ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<div id="page1" class="page">
 
 <h1>❤️ Romantic Surprise ❤️</h1>
 
-<p>Apna naam enter karo</p>
+<p>Baby, apna naam enter karo 💖</p>
 
-<input type="text" id="name" placeholder="Yaha apna naam likho">
+<input type="text" id="name" placeholder="Enter Your Name">
 
 <br><br>
 
-<button onclick="checkName()">Open Surprise 💖</button>
+<button onclick="startLove()">Open My Heart ❤️</button>
 
-<div id="result"></div>
+<p id="error"></p>
+
+</div>
+
+<div id="page2" class="page" style="display:none;">
+
+<h1>Welcome Baby ❤️</h1>
+
+<h2>From Your Betu 💖</h2>
+
+<div id="heartContainer"></div>
+
+<p id="typing"></p>
+
+<button onclick="nextPage()">Next ➜</button>
+
+</div>
+
+<div id="page3" class="page" style="display:none;">
+
+<h1>💌 Love Letter 💌</h1>
+
+<div id="letter"></div>
+
+<button onclick="nextFinal()">Final Surprise ❤️</button>
+
+</div>
+
+<div id="page4" class="page" style="display:none;">
+
+<h1>❤️ Baby ❤️</h1>
+
+<h2>You Are My Everything 💖</h2>
+
+<p>
+Main hamesha tumse pyaar karta rahunga.
+</p>
+
+<h3>Forever Yours ❤️<br>Betu</h3>
 
 </div>
 
@@ -29,4 +66,3 @@
 
 </body>
 </html>
-

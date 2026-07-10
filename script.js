@@ -1,30 +1,98 @@
-function checkName(){
+function startLove(){
 
     let name = document.getElementById("name").value.trim().toLowerCase();
 
-    if(name === "baby"){
-
-        document.getElementById("result").innerHTML = `
-        <h2>💖 I Love You Baby 💖</h2>
-
-        <p>
-        Baby ❤️<br><br>
-
-        Jab se tum meri life me aayi ho,
-        meri duniya aur bhi khoobsurat ho gayi hai. 🌹<br><br>
-
-        Tumhari smile meri sabse badi khushi hai. 😊<br><br>
-
-        Main promise karta hu ki hamesha tumhara saath dunga,
-        har khushi aur har mushkil me. ❤️<br><br>
-
-        <h3>Forever Yours ❤️<br>Betu</h3>
-        `;
+    if(name !== "baby"){
+        document.getElementById("error").innerHTML =
+        "❤️ Ye surprise sirf meri Baby ke liye hai ❤️";
+        return;
     }
-    else{
 
-        document.getElementById("result").innerHTML =
-        "💝 Ye surprise sirf meri Baby ke liye hai. ❤️";
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page2").style.display="block";
+
+    typeWriter();
+    hearts();
+}
+
+let msg="Baby ❤️\n\nJab se tum meri life me aayi ho, meri duniya aur bhi khoobsurat ho gayi hai. Tum meri smile ki wajah ho. Main hamesha tumse pyaar karta rahunga. ❤️";
+
+let i=0;
+
+function typeWriter(){
+
+    if(i<msg.length){
+
+        document.getElementById("typing").innerHTML += msg.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,40);
+
     }
+
+}
+
+function hearts(){
+
+    setInterval(function(){
+
+        let heart=document.createElement("div");
+
+        heart.className="heart";
+
+        heart.innerHTML="❤️";
+
+        heart.style.left=Math.random()*100+"vw";
+
+        heart.style.fontSize=(20+Math.random()*30)+"px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function(){
+
+            heart.remove();
+
+        },6000);
+
+    },300);
+
+}
+
+function nextPage(){
+
+    document.getElementById("page2").style.display="none";
+
+    document.getElementById("page3").style.display="block";
+
+    document.getElementById("letter").innerHTML=
+
+    `💌<br><br>
+
+    Meri Pyari Baby ❤️<br><br>
+
+    Tum meri zindagi ka sabse khoobsurat hissa ho.
+
+    Tumhari har smile meri duniya roshan kar deti hai.
+
+    Main chahta hu ki hum hamesha saath rahein.
+
+    Har din tumhare saath ek nayi khushi lekar aaye.
+
+    <br><br>
+
+    ❤️ Forever Yours ❤️
+
+    <br><br>
+
+    Betu`;
+
+}
+
+function nextFinal(){
+
+    document.getElementById("page3").style.display="none";
+
+    document.getElementById("page4").style.display="block";
 
 }
